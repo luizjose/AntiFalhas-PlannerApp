@@ -1,0 +1,24 @@
+// MEDIDAS SEMPRE POR FORA
+
+//verificar angulo sempre 90 graus
+
+base{
+    - 38,5cm width
+    | 50cm heigth
+    cortes laterais para encaixe da moldura
+}
+moldura vertical{
+    borda 4cm largura
+    - 38,5 largura
+    | 36 de altura
+}
+
+// fazer os pés para firmar bem e manter firme
+
+eixo Y
+{
+
+}
+eletronico{
+    
+}
