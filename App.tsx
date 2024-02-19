@@ -14,13 +14,13 @@ export default function App() {
   return (
 
 <GestureHandlerRootView style={{flex: 1}}>
-  
-   <ThemeProvider theme={theme}>
-    <StatusBar 
+<StatusBar 
     barStyle="light-content"
     backgroundColor="transparent"
     translucent
     />
+   <ThemeProvider theme={theme}>
+    
   
 
 

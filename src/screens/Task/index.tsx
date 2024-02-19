@@ -129,19 +129,19 @@ export default function Task() {
                                         console.log(item.number ,'-', selectedMonth +1 ,'-', selectedYear)
                                     }}
                                     style={{
-                                        backgroundColor: item.number === selectedDay ? "#00875F" : 'transparent'
+                                        backgroundColor: item.number == selectedDay ? "#00875F" : 'transparent'
                                     }}
                                 >
                                     <DateItemWeekDay
                                         style={{
-                                            color: item.number === selectedDay ? "#fff" : '#000'
+                                            color: item.number == selectedDay ? "#fff" : '#000'
                                         }}
                                     >
                                         {item.weekday}
                                     </DateItemWeekDay>
                                     <DateItemNumber
                                         style={{
-                                            color: item.number === selectedDay ? "#fff" : '#000'
+                                            color: item.number == selectedDay ? "#fff" : '#000'
                                         }}
                                     >
                                         {item.number}
