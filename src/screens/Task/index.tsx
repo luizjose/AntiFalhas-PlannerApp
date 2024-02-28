@@ -16,8 +16,12 @@ import {
     NavPrevIcon, 
     SearchArea, 
     SearchInput, 
-    SearchLupa 
+    SearchLupa, 
+    TaskTodayList, 
+    TitleTask, 
+    TodayTaskArea
 } from "./styles";
+import { TaskToday } from "../../components/TaskToday";
 
 const months = [
     'Janeiro',
@@ -115,7 +119,7 @@ export default function Task() {
                     <DateInfo>
                         
                         <DateTitleArea>
-                            <DateTitle>{months[selectedMonth]}</DateTitle>
+                            <DateTitle>{months[selectedMonth] +' - '+ selectedYear}</DateTitle>
                         </DateTitleArea>
                         
                     </DateInfo>
@@ -162,6 +166,75 @@ export default function Task() {
                     </DateList>
                 </DataItem>
             }
+            <TodayTaskArea>
+            <TitleTask>Tarefas Hoje</TitleTask>
+                <TaskTodayList>
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                    <TaskToday
+                          title="Lavar Roupas"
+                          startTime="07:00"
+                          endTime="08:00"
+                          details="concluido"
+                          status={3}
+                    
+                    />
+                </TaskTodayList>
+            </TodayTaskArea>
         </Container>
     );
 }

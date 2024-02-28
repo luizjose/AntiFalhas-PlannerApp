@@ -39,15 +39,24 @@ padding: 50px;
 background-color: ${({theme})=> theme.COLORS.GRAY_400};
 `;
 export const AreaButton = styled.View`
+flex: 0.2;
+width: 250px;
 flex-direction: row;
 justify-content: space-around;
+gap: 20px;
 `;
 export const ButtonTimes = styled.TouchableOpacity`
-width: 80px;
-height: 20px;
+
+width: 110px;
+height: 35px;
+border-radius: 5px;
+
+background-color: #000;
+align-items: center;
+padding: 5px 10px 5px 10px;
 `;
 export const TextButton = styled.Text`
 color: #fff;
-font-size: 14px;
+font-size: 16px;
 text-transform: uppercase;
 `;

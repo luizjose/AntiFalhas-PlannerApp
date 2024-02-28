@@ -16,7 +16,7 @@ import {
 import {InputWithIcon} from "../../components/Input";
 import { Button } from "../../components/Buttons";
 import { useNavigation } from "@react-navigation/native";
-import { findNodeHandle } from 'react-native';
+import { GoogleLogo } from "phosphor-react-native";
 
 
 export default function Login(){
@@ -54,8 +54,9 @@ export default function Login(){
             <Line/>
             <TitleLoginSocial>Ou com</TitleLoginSocial>
             <Line/>
+
             </AreaTitle>
-                
+                <GoogleLogo size={32} color="#fff"/>
             </AreaLoginSocial>
             <SignUpArea>
                 <TextSignUp>Não tem uma conta? </TextSignUp>

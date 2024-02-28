@@ -1,5 +1,5 @@
 import { MaterialIcons } from '@expo/vector-icons';
-import { TextInput } from 'react-native';
+import { ScrollView, TextInput } from 'react-native';
 import styled from "styled-components/native";
 
 export const Container = styled.SafeAreaView`
@@ -11,6 +11,7 @@ export const Container = styled.SafeAreaView`
 
 // Componente SearchArea
 export const SearchArea = styled.View`
+flex: .07;
   flex-direction: row;
   height: 50px;
   margin-top: 20px;
@@ -34,6 +35,7 @@ export const SearchInput = styled(TextInput)`
   color: #fff;
 `;
 export const DataItem = styled.View`
+flex: .2;
     background-color: ${({theme})=> theme.COLORS.GRAY_100};
     border-radius: 10px;
     margin-top: 15px;
@@ -96,4 +98,24 @@ export const DateItemWeekDay = styled.Text`
 export const DateItemNumber = styled.Text`
     font-size: 16px;
     font-weight: bold;
+`;
+export const TodayTaskArea = styled.View`
+   flex: 1;
+   margin-top: 10px;
+   height: 250px;
+   
+ `;
+ export const TitleTask = styled.Text`
+   
+ color: ${({ theme }) => theme.COLORS.GREEN_700};
+ font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+ font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
+`;
+export const TaskTodayList = styled(ScrollView)`
+flex: 1;
+height: 200px;
+
+padding: 5px 10px 20px 10px;
+
+
 `;
