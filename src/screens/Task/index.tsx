@@ -44,6 +44,10 @@ const days = [
     'Sex',
     'Sab'
 ];
+type Props= {
+    weekday: any,
+    number: any
+}
 
 export default function Task() {
     const [selectedYear, setSelectedYear] = useState(0);
@@ -83,20 +87,23 @@ export default function Task() {
         console.log(selectedDay)
     }, [selectedYear, selectedMonth, selectedDay]);
 
-    const handleLeftWeekClick = () => {
-        let previousWeek = new Date(selectedYear, selectedMonth, selectedDay - 7);
-        setSelectedYear(previousWeek.getFullYear());
-        setSelectedMonth(previousWeek.getMonth());
-        setSelectedDay(previousWeek.getDate());
+    const handleLeftWeekClick = async() => {
+        let previousWeek = await new Date(selectedYear, selectedMonth, selectedDay - 7);
+        await setSelectedYear(previousWeek.getFullYear());
+        await setSelectedMonth(previousWeek.getMonth());
+        await setSelectedDay(previousWeek.getDate());
     };
+    
+    const handleNextWeekClick = async() => {
+        const res = parseInt(selectedDay, 10) + 7;
+        let nextWeek = await new Date(selectedYear, selectedMonth, res);
 
-    const handleNextWeekClick = () => {
-        let nextWeek = new Date(selectedYear, selectedMonth, selectedDay + 7);
-        setSelectedYear(nextWeek.getFullYear());
-        setSelectedMonth(nextWeek.getMonth());
-        setSelectedDay(nextWeek.getDate());
+        console.log(res)
+        await setSelectedYear(nextWeek.getFullYear());
+        await setSelectedMonth(nextWeek.getMonth());
+        await setSelectedDay(nextWeek.getDate());
+        console.log(months[selectedMonth]);
     };
-
     return (
         <Container>
             <SearchArea>

@@ -4,9 +4,9 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 export const Container = styled.TouchableOpacity`
     flex: 1;
-    min-width: 150px;
-    max-width: 150px;
-   margin:15px;
+    min-width: 43%;
+    max-width: 44%;
+    margin:10px;
    
     padding:15px 5px 15px 10px;
     border-radius: 10px;

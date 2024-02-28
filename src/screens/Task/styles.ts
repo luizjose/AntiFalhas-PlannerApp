@@ -1,4 +1,5 @@
 import { MaterialIcons } from '@expo/vector-icons';
+import { TextInput } from 'react-native';
 import styled from "styled-components/native";
 
 export const Container = styled.SafeAreaView`
@@ -26,10 +27,11 @@ export const SearchLupa = styled(MaterialIcons)`
 `;
 
 // Componente SearchInput
-export const SearchInput = styled.TextInput`
+export const SearchInput = styled(TextInput)`
   flex: 1;
   margin-left: 8px;
   font-size: 16px;
+  color: #fff;
 `;
 export const DataItem = styled.View`
     background-color: ${({theme})=> theme.COLORS.GRAY_100};

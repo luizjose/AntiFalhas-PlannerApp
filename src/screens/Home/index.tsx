@@ -26,7 +26,7 @@ export default function Home(){
                 </WelcomeTextArea>
                 <Avatar source={AvatarIcon}/>
             </WelcomeArea>
-            <MyTaskArea>
+            <MyTaskArea style={{flex:1}}>
                 <TitleTask>Minhas Tarefas</TitleTask>
                 <CardTasks>
                 <MyTask  icon="house" coloricon="#000" colortext="#000" top={15} height={150} size={50} status="Completo" total="10" color="#7DC8E7" />
