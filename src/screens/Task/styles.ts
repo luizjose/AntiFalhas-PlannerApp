@@ -11,7 +11,7 @@ export const Container = styled.SafeAreaView`
 
 // Componente SearchArea
 export const SearchArea = styled.View`
-flex: .07;
+  flex: .07;
   flex-direction: row;
   height: 50px;
   margin-top: 20px;

@@ -9,6 +9,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import { Loading } from './src/components/Loading';
 import  'react-native-gesture-handler'
 import { GestureHandlerRootView, NativeViewGestureHandler } from 'react-native-gesture-handler';
+import Toast from 'react-native-toast-message';
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
   return (
@@ -29,6 +30,7 @@ export default function App() {
     
     </NavigationContainer>
    </ThemeProvider>
+   <Toast />
    </GestureHandlerRootView>
   );
 }

@@ -1,10 +1,12 @@
-import { Text, View } from "react-native";
+import React, { useState } from "react";
 import { Container } from "./styles";
 
-export default function Profile(){
-    return(
-        <Container>
-            <Text>Profile</Text>
-        </Container>
-    );
+export default function Profile() {
+
+
+  return (
+    <Container>
+      
+    </Container>
+  );
 }
