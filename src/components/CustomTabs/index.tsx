@@ -23,14 +23,14 @@ export default function CustomTabs({ state, navigation }:Props)  {
       <TabItem onPress={() => goTo('Task')}>
         <Icon  name='article' style={{ color: state.index === 1 ? '#00B37E' : '#7C7C8A' }}  />
       </TabItem>
-      <TabItemCenter>
-        <IconCenter name='plus' />
-      </TabItemCenter>
+      <TabItem onPress={() => goTo('Finance')}>
+        <Icon name='attach-money'   style={{ color: state.index === 2 ? '#00B37E' : '#7C7C8A' }} />
+      </TabItem>
       <TabItem onPress={() => goTo('Graphic')}>
-        <Icon  name='analytics' style={{ color: state.index === 2 ? '#00B37E' : '#7C7C8A' }}  />
+        <Icon  name='access-time' style={{ color: state.index === 3 ? '#00B37E' : '#7C7C8A' }}  />
       </TabItem>
       <TabItem onPress={() => goTo('Profile')}>
-        <Icon  name='account-circle' style={{ color: state.index === 3 ? '#00B37E' : '#7C7C8A' }}  />
+        <Icon  name='account-circle' style={{ color: state.index === 4 ? '#00B37E' : '#7C7C8A' }}  />
       </TabItem>
     </TabArea>
     </Container>

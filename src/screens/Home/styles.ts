@@ -36,7 +36,7 @@ export const Avatar = styled.Image`
  `;
 export const MyTaskArea = styled.View`
 flex: 1.6;
-height: 340px;
+height: 320px;
  `;
 export const TitleTask = styled.Text`
    
