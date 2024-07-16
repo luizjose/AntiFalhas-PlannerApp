@@ -3,10 +3,9 @@ import { Container, Title,  } from "./styles";
 interface Props {
     title: string;
 }
-export function Button({title,  ...rest}:Props){
+export function Button({title}:Props){
     return(  
         <Container
-            {...rest}
         >
            <Title>{title}</Title>
       

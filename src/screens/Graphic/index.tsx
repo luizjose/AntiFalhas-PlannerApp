@@ -46,12 +46,24 @@ export default function Graphic() {
 
       if (count === 0) {
         // Exibir toast e vibrar
-        Vibration.vibrate(1000);
-        Toast.show({
-          type: 'success',
-          text1: 'Tempo Acabou',
-          text2: 'Seu período de trabalho/descanso acabou!',
-        });
+        if( type === "pomodoro" ) {
+          Vibration.vibrate(1000);
+          Toast.show({
+            type: 'success',
+            text1: 'Tempo Acabou',
+            text2: 'Seu período de trabalho acabou!',
+          });
+          changeType('short');
+        } else if( type === "short" ) {
+          Vibration.vibrate(1000);
+          Toast.show({
+            type: 'success',
+            text1: 'Tempo Acabou',
+            text2: 'Seu período de descanso acabou!',
+          });
+          changeType('pomodoro');
+        }
+       
         if (sound) {
           sound.replayAsync();
         }

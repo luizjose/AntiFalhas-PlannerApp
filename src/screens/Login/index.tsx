@@ -15,15 +15,19 @@ import {
  } from "./styles";
 import {InputWithIcon} from "../../components/Input";
 import { Button } from "../../components/Buttons";
-import { useNavigation } from "@react-navigation/native";
+import { CommonActions, useNavigation } from "@react-navigation/native";
 import { GoogleLogo } from "phosphor-react-native";
 
 
 export default function Login(){
     const navigation = useNavigation();
-    const handleLogin=async()=>{
-        navigation.navigate('TabsMain')
-    }
+
+
+    const handleLogin = () => {
+        navigation.dispatch(
+            CommonActions.navigate('TabsMain')
+        ) // Removed 'await'
+    };
     
     return(
         
@@ -34,6 +38,7 @@ export default function Login(){
                 <InputWithIcon 
                     icon="mail"
                     placeholder="Email ou Username"
+                    password={false}
                 />
                 <InputWithIcon 
                     icon="lock-outline"
@@ -45,8 +50,8 @@ export default function Login(){
                 </ButtonForgot>
                 <Button 
                     title="Login"
-                
-                    onPress={handleLogin}
+                    
+                    onPress={()=> handleLogin()}
                 />
             </FormLogin>
             <AreaLoginSocial>
@@ -56,7 +61,7 @@ export default function Login(){
             <Line/>
 
             </AreaTitle>
-                <GoogleLogo size={32} color="#fff"/>
+           
             </AreaLoginSocial>
             <SignUpArea>
                 <TextSignUp>Não tem uma conta? </TextSignUp>
