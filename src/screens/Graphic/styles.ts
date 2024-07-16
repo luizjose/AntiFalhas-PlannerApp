@@ -35,6 +35,7 @@ export const AreaPomodoro = styled.View`
 height: 550px;
 justify-content: space-between;
 align-items: center;
+border-radius: 20px;
 padding: 50px;
 background-color: ${({theme})=> theme.COLORS.GRAY_400};
 `;
